@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- meta -->
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,600i,700,700i|Playfair+Display:400,400i,700,700i,900,900i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- Main Stylesheet File -->
+  <link href="css/realdealstyl.css" rel="stylesheet">
+  <link href="css/2-1.css" rel="stylesheet">
+
+
+  <!-- Responsive css -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.4.2/mammoth.browser.min.js"></script>
+</head>
+
+  <body>
+
+    <style>
+    .bgh {
+        background-image: url('images/p2-2/p2-2-1.jpg');
+        background-size: 100% auto; 
+        background-position: center; 
+        background-repeat: no-repeat; 
+        width: 100%;
+        height: 30vh;
+        margin-top: 4rem;
+    }
+
+    .bgcol0 {
+        background-image: url('images/p2-2/p2-2-2.png');
+        background-size: 74vw auto; 
+        background-repeat: repeat-y; 
+    }
+
+    .scrollx {
+    display: flex;
+    width: 68vw;
+    overflow-x: scroll;
+    font-size: 1rem;
+    height: auto;
+    background-color: rgba(255, 255, 255, 0.3);
+    }
+
+    .scrolltext{
+    width: 68vw; 
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.3);
+    white-space: nowrap; 
+    overflow-x: scroll;
+    font-size: 1rem;
+    }
+
+    .scrolltextcontent {
+    display: flex;
+    width: 1200px; 
+    }
+
+    .blockx{
+    height: 20rem;
+    width: auto;
+    margin: 1rem;
+    }
+
+    img.feralx{
+    width: 22rem;
+    height: auto;
+    }
+
+    img.feraly{
+    height: 22rem;
+    width: auto;
+    }
+
+    .img-container {
+    position: relative;
+    display: inline-block;
+    }
+
+    .img-container::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 1.15vw;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    white-space: nowrap; 
+    padding: 0.2vw 0.5vw; 
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+    }
+
+    .img-container:hover::before {
+    opacity: 1;
+    }
+
+    #hover-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -100%); 
+    display: none; 
+    background: rgba(0, 0, 0, 0.7); 
+    color: white;
+    padding: 5px;
+    border-radius: 3px;
+    pointer-events: none; 
+    }
+    </style>
+
+    <div class="bgh">
+    </div>
+
+    <div class="contentsec">
+    <div class="pros">
+        <div class="bgcol0">
+        <div class = "col0">
+            <p class="large1" style="margin-bottom: 0; width: 100%; margin-top: 0;"> <b>The Bedroom </b></p>
+            <p class="large2" style="margin-bottom: 0; margin-top: 0;"> A sound-narrative of a bedroom in the feral world of Espoo</p> 
+        </div>
+        <div class = "col0" style="margin-top: 2rem;">
+            <p style="width: 90%;">This project was done in the course <i>Experimental Design</i> in contemporary 
+            department in Aalto University. Under the theme “Making sense with more-than-human urban ecologies”, 
+            <i>The Bedroom</i> was created. It is a sound narrative of a bedroom in the feral world of Espoo. It 
+            is presented as a digital interface offering a sound narrative that captures the essence of my personal 
+            space. Individuals can immerse themselves in the ambient sounds, providing a glimpse into my untamed 
+            environment.This project has been exhibited in UROBOROS Festival in Prague National Gallery.</br></br></br>
+            </p>
+        </div>   
+
+        <div class = "col0">  
+            <p class="large1" style="width: 100%;"><b>Feral Ways of Making Sense with More-than-human Urban Ecologies</br></b></p>
+
+            <div class="accordion">
+            <div class="accordion-item">
+                <div class="accordion-header">
+                <p class="accordion-title">More specifically?</p>
+                <span class="icon-arrow" onclick="toggleContent(this)">▼</span>
+                </div>
+                <div class="accordion-content">
+                <p> - Exploring Helsinki as more-than-human city</br>
+                    - Investigate more-than-human relations & power dynamics that form the city</br>
+                    - Through performative, imaginative, experiential approach: drifting, listening, noticing, </br>
+                    &nbsp;&nbsp;crafting, storying, sharing… </br>
+                    - Spend time with mth ecologies, creatures & ourselves</br>
+                    - Co-create feral data artifacts</br>
+                </p>
+                </div>
+            </div>
+            
+            <div class="accordion-item">
+                <div class="accordion-header">
+                <p class="accordion-title">What is “feral”?</p>
+                <span class="icon-arrow" onclick="toggleContent(this)">▼</span>
+                </div>
+                <div class="accordion-content">
+                <p>"Feral" comes from the latin term “ferus,” which means wild.</br>
+                    For example, feral species - once domesticated creatures that have returned to the</br>
+                    wild and become untamed, having unexpected impacts on the environment.</br>
+                    Can i be a feral creature?</br>
+                    “A situation in which an entity, nurtured and transformed by a human-made infrastructural </br>
+                    project, assumes a trajectory beyond human control.”</br>
+                    (Tsing et al. 2021 - feral atlas).</br>
+                </p>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-header">
+                <p class="accordion-title">What are feral ways?</p>
+                <span class="icon-arrow" onclick="toggleContent(this)">▼</span>
+                </div>
+                <div class="accordion-content">
+                <p>
+                    Feral ways (of knowing, doing, sensemaking...) are untamed and unexpected, spontaneous and </br>
+                    situated.</br>
+                    They are unfolding beyond human control and seeding unexpected more-than-human relations.</br>
+                    Ambivalent in their impacts: positive or negative, depending for whom.</br>
+                    Engendering a potential to challenge the dominant normativity.</br>
+                </p>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-header">
+                <p class="accordion-title">What is more-than-human (design)?</p>
+                <span class="icon-arrow" onclick="toggleContent(this)">▼</span>
+                </div>
+                <div class="accordion-content">
+                <p>
+                    Prioritising the vital co-existence of all beings.</br>
+                    Designing with and alongside the needs and lived experiences of human and other-than-human</br>
+                    actors alike.</br>
+                    As inclusive of both multispecies nature & algorithmic agencies (wow) (plants, animals, </br>
+                    microbes, myths, dreams, buildings, computational systems, algorithms…)</br>
+                    Everyday life is always a more-than-human affair.</br>          
+                </p>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-header">
+                <p class="accordion-title">Why does it matter?</p>
+                <span class="icon-arrow" onclick="toggleContent(this)">▼</span>
+                </div>
+                <div class="accordion-content">
+                <p>
+                    The Anthropocene continues to have a significant impact on Earth's ecosystems.</br> 
+                    Transformations towards more socially and ecologically sustainable ways of life are urgently </br>
+                    needed to address impacts of climate breakdown (Lee et al. 2023). Pathways towards necessary </br>
+                    changes to how we live together on the planet are contested and interdependent: they must go </br>
+                    beyond awareness raising campaigns and behaviour change to enable shifts in people's everyday </br>
+                    practices, lifestyles, productive means, and political systems. </br>
+                    An important role in understanding how to re-imagine and enact positive eco-social change is </br>
+                    played by creative practices in art and design. Creative practitioners and practice-based </br>
+                    researchers have long experimented with diverse approaches to support positive eco-social </br>
+                    action, showing that art and design are transformative, particularly by provoking situations </br>
+                    that bring together stakeholders into imaginative, reflective exchange (Dolejšová et al. 2021, </br>
+                    Houston et al. 2022, Irwin 2015, Light et al. 2019, Maggs & Robinson 2020, Neal 2015).</br>           
+                </p>
+                </div>
+            </div>
+            </div>
+
+        </div>
+
+
+        <div class = "col0">
+            <p class="large1" style="width: 100%; margin-bottom: 1vh;"><b>My Feral Place</b></p>
+            <p><b>Aalto University Otaniemi Campus/
+            Servin Maijan tie 12, 02150 Espoo, Finland</b>/
+            coastal area/
+            typically cool autumn/
+            getting cooler/
+            average temperatures in mid-autum range from around 0 to 10°C/
+            very possibly some rain/
+            there are birthes, rowans, alders, maples/
+            student houses/
+            fallen leaves/
+            ...
+            </p>
+            <img src="images/p2-2/location.gif" alt="location in the map" class = "col1pic">
+        </div>
+
+        <div class="accordion" style="margin-top: 4vh;">
+            <div class="accordion-item">
+            <div class="accordion-header">
+                <p class="accordion-title" style="font-size: 1.5rem;">"The comfortable and uncomfortable encounterings" <span style="font-size: 1.15rem;"> -- click to expand</span></p>
+                <span class="icon-arrow" onclick="toggleContent(this)">▼</span>
+            </div>
+            <div class="accordion-content">
+                </p>
+                My window is a bit broken, and my door allows leaks, unexpectedly exposing me to the cold wind and the surprisingly 
+                loud rain while lying in bed.</br>
+                But the nature is stunning. The reeds, the thin ice on the lake, tall trees, falling snowflakes.</br>
+                In essence, these contrasting emotions represent an internal conflict within me. It is a fight between humanity's 
+                inherent desire for a stable, enclosed dwelling and the innate love for wild nature within us. There exists a 
+                fundamental and instinctual affection for nature in humans, a deep-seated inclination woven into our DNA. </br></br>
+                <img src="images/p2-2/p2-2-20.png" alt="mapping" class = "col1pic">
+                </br>
+                To investigate these queries, I have adopted a method of immersing myself in the surroundings and thoroughly observing 
+                the details. My approach involves concentrating on my emotions and capturing as much feral data as possible, guided by 
+                drifting prompts.</br>
+            </div>
+            </div>
+        </div>
+        </div>
+
+
+        <div class = "col3">
+        <p><b>KEYWORDS</b></br></p>
+        <p> Digital interface</br>
+            Sound narrative</br>
+            Contemporary design</br>
+            Experimenal design</br>
+            More-than-human design</br>
+            Helsinki</br></br>
+        </p>
+        <p><b>SKILLS</b></br></p>
+        <p> Computing languages: JavaScript</br>
+            Web things: Html5, css</br>
+            Graphic design</br>
+            Video editing</br>
+            Drifting</br>
+            Co-creation with natural environments</br></br>
+        </p>
+        <p> <a href="https://www.aalto.fi/en/contemporary-design/experimental-design">
+            >><b>report & reflective diary</b> 
+            </a></br>
+            <a href="https://collective.uroboros.design/feralcourse/">
+                >><b>video and more information</b> 
+            </a></br>
+            <a href="https://tiao12138.github.io/The_Bedroom">
+                >><b>The Bedroom</b> 
+            </a></br></br></br>
+        </p>
+        </div>
+
+        <div class="bgcol0">
+        <div class = "col0">
+            <p class="large1" style="width: 100%; margin-bottom: 0; margin-top: 4rem;"><b>Feral Data Collection</b></p>
+            <p style="margin-top: 0;">The most feral data I've gathered are my sensory impressions during the drifting practice, 
+            and they were documented by subsequent note-taking or on-site recordings including audio, videos, and photos. Utilizing 
+            this data allows me to characterize my feral place, identify my focal points, and potentially address the 
+            questions I posed earlier.
+            </p>
+        </div>
+
+        <div class="col0">
+            <div class="scrollx">
+            <div class="blockx">
+                <img src="images/p2-2/p2-2-10.png" alt="" class = "feralx" style="margin-left: 1rem;">
+                <p class="smallcaption"> </p>
+            </div>
+            <div class="blockx">
+                <img src="images/p2-2/p2-2-11.png" alt="" class = "feraly">
+                <p class="smallcaption"> </p>
+            </div>
+            <div class="blockx">
+                <img src="images/p2-2/p2-2-12.png" alt="" class = "feraly">
+                <p class="smallcaption"> </p>
+            </div>
+            <div class="blockx">
+                <img src="images/p2-2/p2-2-13.png" alt="" class = "feralx">
+                <p class="smallcaption"> </p>
+            </div>
+            <div class="blockx">
+                <img src="images/p2-2/p2-2-14.png" alt="" class = "feralx">
+                <p class="smallcaption"> </p>
+            </div>
+            <div class="blockx">
+                <img src="images/p2-2/p2-2-15.png" alt="" class = "feraly">
+                <p class="smallcaption"> </p>
+            </div>
+            <div class="blockx">
+                <img src="images/p2-2/p2-2-16.png" alt="" class = "feraly">
+                <p class="smallcaption"> </p>
+            </div>
+            <div class="blockx">
+                <img src="images/p2-2/p2-2-17.png" alt="" class = "feraly">
+                <p class="smallcaption"> </p>
+            </div>
+            <div class="blockx">
+                <img src="images/p2-2/p2-2-18.png" alt="" class = "feralx">
+                <p class="smallcaption"> </p>
+            </div>
+            </div>
+        </div>
+
+        <div class="scrolltext">
+            <div class="scrolltextcontent">   
+            <p>    
+                <span style="color: #C2E3FD;">HOW DOES YOUR CHEEK RECORD A SURFACE NEAR YOU</span> - <span style="color: #A1E496;">HOW DOES IT FEEL ON THIS PART OF YOU? DO YOU NOTICE SOMETHING NEW? /</span>
+                <span style="color: #EDDAD6;">TOUCH SOMETHING YOU HAVE NEVER TOUCHED BEFORE. IS THIS SOMETHING YOU USUALLY AVOID? OR JUST SOMETHING YOU HAVE NEVER ENCOUNTERED BEFORE? DID ANYTHING SURPRISE YOU ABOUT THIS TOUCH?</span></br>
+                <span style="color: #A1E496;">CLOSE YOUR EYES. LISTEN TO THE SOUNDS OF THE PLACE AROUND YOU.</span><span style="color: #E2DFA5;">MAP WHAT YOU HEAR. DOES IT SOUND DIFFERENT THAN BEFORE? CAPTURE IT. /</span> 
+                <span style="color: #E2DFA5;"> TRACE YOUR HAND ALONG A PART OF YOUR BODY, AND IMAGINE THIS IS THE PATH OF A BUG.</span><span style="color: #C2E3FD;"> HOW WOULD IT UNDERSTAND THIS TERRAIN OF YOU? HOW CAN A SCALE SHIFT SOMEONE'S PERCEPTION OF THE WORLD?</span></br>
+                <span style="color: #d3d3d3;">NOTICE HOW MUCH SPACE IS BETWEEN YOU AND THE NEAREST LIFEFORM. </span> <span style="color: #C2E3FD;">HOW CAN YOU FILL THE SPACE SO THE OTHER CREATURE NOTICES? /</span>
+                <span style="color: #EDDAD6;"> MAP THE KINDS OF DATA BEING COLLECTED ABOUT YOU RIGHT HERE AND NOW. </span> <span style="color: #E2DFA5;">THE SAME FOR TWO OTHER CREATURES NEAR YOU. WHAT DATA ARE BEING COLLECTED ABOUT YOU AND THINGS AROUND YOU?</span></br>
+                <span style="color: #C2E3FD;">BECOME A TREE. WHAT HAVE YOU WITNESSED THROUGH YOUR LIFETIME? WHAT MIGHT YOU WITNESS IN THE FUTURE? /</span>
+                <span style="color: #EDDAD6;">IMAGINE YOURSELF AS COMPOST. WHAT IS THE MATTER OF YOU? </span><span style="color: #A1E496;">WHAT THINGS HAVE GONE INTO MAKING AND NURTURING YOU?</span></br>
+                <span style="color: #d3d3d3;">IMAGINE YOU ARE A SEED IN THE GROUND. WHAT ARE YOU LOOKING FOR? WHAT DO YOU GROW, WITH & FOR WHOM? /</span>
+                <span style="color: #A1E496;">WHERE DOES YOUR WORLD START AND END IF YOU WERE A BIRD?</span> <span style="color: #E2DFA5;">WHO IS PART OF YOUR WORLD, WHO MATTERS TO YOU? DRAW IT.</span></br>
+                <span style="color: #C2E3FD;">HOW WOULD YOU MOVE IF YOU HAD MORE THAN 2 LEGS? TRY IT. /</span>
+                <span style="color: #EDDAD6;">WHAT GIFTS ARE YOU GIVING THE WORLDS AROUND TODAY? WHAT GIFTS ARE THEY GIVING YOU?</span></br>
+                <span style="color: #E2DFA5;">IMAGINE YOU ARE A BIRD. WHAT DO YOU NOTICE ABOUT HUMANS? /</span>
+                <span style="color: #A1E496;">NOTICE AN OTHER-THAN-HUMAN CREATURE IN YOUR SURROUNDINGS. INHABIT THEIR RHYTHM. CAPTURE IT.</span></br>
+                <span style="color: #d3d3d3;">FIND A PLACE OF STILLNESS. WAIT UNTIL ANOTHER BEING ENCOUNTERS YOU.</span> <span style="color: #EDDAD6;">WHAT HAPPENS WHEN WE PAUSE? CAN YOU COMFORTABLY WAIT UNTIL YOU ARE ENCOUNTERED BY ANOTHER? /</span>
+                <span style="color: #C2E3FD;">ASK AN OTHER-THAN-HUMAN CREATURE AROUND YOU FOR THE TIME. </span> <span style="color: #E2DFA5;">HOW MIGHT A DAY, A WEEK, OR A YEAR BE PERCEIVED BY THIS CREATURE?</span></br>
+            </p> 
+            </div>
+        </div>
+
+        <div class="accordion" style="margin-top: 5rem;">
+            <div class="accordion-item">
+            <div class="accordion-header">
+                <p class="accordion-title" style="font-size: 1.75rem;">Sound? <span style="font-size: 1.15rem;"> -- click to expand </span></p>
+                <span class="icon-arrow" onclick="toggleContent(this)">▼</span>
+            </div>
+            <div class="accordion-content">
+                <p>Sound stood out in the process as a effective medium to express my feeling of my feral place.</br>
+                Sound is story telling</br>
+                Sound leaves people space to imagine</br>
+                They can overlap each other, making harmonies</br>
+                They are more-than-human feral data, not like human laguages, they apply to other-than-human beings, too.</br>
+                I recorded various sounds from my feral place, mapping them to different levels of 'feralness', evoking both comfort and discomfort. 
+                This approach helps convey the story I wish to share with the feral world. Additionally, I documented this journey in video, which 
+                I edited into a <a href="https://collective.uroboros.design/feralcourse/"> short film </a> for the exhibition.</p>
+                <div style="width: 100%; display: flex;">
+                <div class="col1" style="margin-top: 1rem;">
+                    <img src="images/p2-2/p2-2-7.png" alt=" " class = "col1pic">
+                </div>
+                <div class="col2" style="margin-top: 1rem;">
+                    </br></br>
+                    Ten audio clips have been carefully chosen to offer people an immersive experience of my environment,
+                    and these are featured on a webpage. Corresponding to each soundtrack, there are ten intentionally 
+                    blurred images serving as icons. The audio clips, ranging from 12 to 90 seconds, are set on continuous loops.
+                    </br>
+                    On the webpage, my goal is to narrate my deeply personal story and intimate feelings through sound in an 
+                    interactive manner. The design aims to serve as a link, allowing users to go on a journey to the distinct room 
+                    of a student at Aalto University, Otaniemi Campus, and for them to connect with and resonate with their own
+                    feral life.</br>
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <div class = "col0"  style="margin-top: 5rem;">
+            <div style="flex-basis: 100%;">
+            <p class="large1"><b>Feral Design Artifact</b></p>
+            </div>
+        </div>
+
+        <div class="col01" style="margin-top: 0; width: 84vw; background-image: url('images/p2-2/p2-2-30.png'); background-size: cover; background-repeat: no-repeat; width: 84vw; height: 48vw; position: relative;">
+            <div class="img-container" data-text="went down for an aurora stroll" style="position: absolute; top: 5vw; left: 38vw;">
+            <img src="images/p2-2/p2-31.svg" alt="" class="icon" style="width: 8vw; height: auto;">
+            </div>
+            <div class="img-container" data-text="reading" style="position: absolute; top: 30vw; left: 42vw;">
+            <img src="images/p2-2/p2-32.svg" alt="" class="icon" style="width: 8vw; height: auto;">
+            </div>
+            <div class="img-container" data-text="fallen leaves uder snow" style="position: absolute; top: 16vw; left: 43vw;">
+            <img src="images/p2-2/p2-33.svg" alt="" class="icon" style="width: 8vw; height: auto;">
+            </div>
+            <div class="img-container" data-text="bed" style="position: absolute; top: 41vw; left: 35vw;">
+            <img src="images/p2-2/p2-34.svg" alt="" class="icon" style="width: 8vw; height: auto;">
+            </div>
+            <div class="img-container" data-text="typing on keyboard" style="position: absolute; top: 31vw; left: 25vw;">
+            <img src="images/p2-2/p2-35.svg" alt="" class="icon" style="width: 8vw; height: auto;">
+            </div>
+            <div class="img-container" data-text="fallen leaves" style="position: absolute; top: 27vw; left: 8vw;">
+            <img src="images/p2-2/p2-36.svg" alt="" class="icon" style="width: 8vw; height: auto;">
+            </div>
+            <div class="img-container" data-text="Symphony of Mendelssohn" style="position: absolute; top: 38vw; left: 19vw;">
+            <img src="images/p2-2/p2-37.svg" alt="" class="icon" style="width: 8vw; height: auto;">
+            </div>
+            <div class="img-container" data-text="reeds in frozen lake" style="position: absolute; top: 11vw; left: 21vw;">
+            <img src="images/p2-2/p2-38.svg" alt="" class="icon" style="width: 8vw; height: auto;">
+            </div>
+            <div class="img-container" data-text="snow" style="position: absolute; top: 28vw; left: 59vw;">
+            <img src="images/p2-2/p2-39.svg" alt="" class="icon" style="width: 8vw; height: auto;">
+            </div>
+            <div class="img-container" data-text="view from balcony" style="position: absolute; top: 22vw; left: 32vw;">
+            <img src="images/p2-2/p2-40.svg" alt="" class="icon" style="width: 8vw; height: auto;">
+            </div>
+            <span id="hover-text">Hover Text</span>
+        </div>
+
+        </div>
+        <img id="backToTop" src="images/top.svg" alt="back to top">
+    </div> 
+    </div>
+    <script src="js/p2-2.js"></script>
+    <script src="js/realdeal.js"></script>
+  </body>
+
+</html>
